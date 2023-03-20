@@ -13,6 +13,8 @@ The easiest way to notify views of changes is by using the @Published property w
 # Environment Object
 An @EnvironmentObject is a special object that can be used in any view and is defined at a higher level view. It's available to read whenever needed, so any child view can access it if needed.
 
+You can read environment values a few levels deep, even though in-between views don’t do anything with it. You have to be careful when working with multiple environment values of the same type since there’s a priority system in place.
+
 ``` swift
 final class Theme: ObservableObject {
     @Published var primaryColor: Color = .orange
